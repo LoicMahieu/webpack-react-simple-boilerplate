@@ -4,8 +4,13 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "webpack-dev-server --port 3000 --hot --colors --inline --history-api-fallback --content-base src"
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "babel-core": "^6.3.17",
+    "webpack": "^1.12.9",
+    "webpack-dev-server": "^1.14.0"
+  }
 }
