@@ -1,4 +1,12 @@
 
-require('./styles/main.css')
+import React from 'react'
+import ReactDOM from 'react-dom'
+import Main from './views/main'
 
-console.log('Hello world!')
+// Load main styles
+import './styles/main.css'
+
+ReactDOM.render(
+  <Main/>,
+  document.body
+)
