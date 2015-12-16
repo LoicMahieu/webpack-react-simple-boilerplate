@@ -10,6 +10,9 @@
   "license": "ISC",
   "devDependencies": {
     "babel-core": "^6.3.17",
+    "css-loader": "^0.23.0",
+    "postcss-loader": "^0.8.0",
+    "style-loader": "^0.13.0",
     "webpack": "^1.12.9",
     "webpack-dev-server": "^1.14.0"
   }
