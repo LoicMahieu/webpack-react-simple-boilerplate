@@ -1,5 +1,6 @@
 
 var path = require('path')
+var fs = require('fs')
 
 module.exports = {
   context: path.join(__dirname, '/src'),
@@ -19,6 +20,9 @@ module.exports = {
       require('postcss-import'),
       require('autoprefixer'),
       require('postcss-nested'),
+      function (css) {
+        css.prepend(fs.readFileSync('./src/styles/variables.css').toString('utf8'))
+      },
       require('postcss-simple-vars')
     ]
   }

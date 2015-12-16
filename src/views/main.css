@@ -1,6 +1,6 @@
 
 body {
-  background: yellow;
+  background: $background;
 
   a {
     background: blue;

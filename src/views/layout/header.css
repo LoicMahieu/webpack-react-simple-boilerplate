@@ -1,6 +1,10 @@
 
-@import '../../styles/colors.css';
+$title: pink;
 
 header {
-  background: $blue;
+  background: $header;
+
+  h1 {
+    color: $title;
+  }
 }
