@@ -11,5 +11,11 @@ module.exports = {
               loader: "style-loader!css-loader?sourceMap!postcss-loader"
           }
       ]
+  },
+  postcss: function () {
+      return [
+        require('autoprefixer'),
+        require('postcss-nested')
+      ];
   }
 }
