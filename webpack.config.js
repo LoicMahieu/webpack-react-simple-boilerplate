@@ -16,8 +16,10 @@ module.exports = {
   },
   postcss: function () {
     return [
+      require('postcss-import'),
       require('autoprefixer'),
-      require('postcss-nested')
+      require('postcss-nested'),
+      require('postcss-simple-vars')
     ]
   }
 }

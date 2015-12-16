@@ -1,4 +1,6 @@
 
+@import '../../styles/colors.css';
+
 header {
-  background: pink;
+  background: $blue;
 }
