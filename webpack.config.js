@@ -1,6 +1,7 @@
 
 var path = require('path')
 var fs = require('fs')
+var ExtractTextPlugin = require('extract-text-webpack-plugin')
 
 module.exports = {
   devtool: 'inline-source-map',
@@ -10,12 +11,20 @@ module.exports = {
     loaders: [{
       test: /\.js$/,
       exclude: /node_modules/,
-      loaders: ['babel-loader?sourceMap']
+      loader: 'babel-loader?sourceMap'
     }, {
       test: /\.css$/,
-      loader: 'style-loader!css-loader?sourceMap!postcss-loader'
+      loader: ExtractTextPlugin.extract('style-loader', 'css-loader?sourceMap!postcss-loader')
     }]
   },
+  output: {
+    path: __dirname + '/dist',
+    filename: 'bundle.js',
+    publicPath: '/'
+  },
+  plugins: [
+    new ExtractTextPlugin('style.css', { allChunks: true })
+  ],
   postcss: function () {
     return [
       require('postcss-import'),
