@@ -1,10 +1,12 @@
 
-$title: pink;
-
-header {
-  background: $header;
+.header {
+  background: pink;
 
   h1 {
-    color: $title;
+    color: white;
   }
+}
+
+:global(.foo) {
+  background: green;
 }
