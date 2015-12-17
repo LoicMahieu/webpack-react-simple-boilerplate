@@ -35,5 +35,8 @@ module.exports = {
       },
       require('postcss-simple-vars')
     ]
+  },
+  devServer: {
+    historyApiFallback: true
   }
 }
