@@ -5,5 +5,5 @@ import Main from './views/main'
 
 ReactDOM.render(
   <Main/>,
-  document.body
+  document.getElementById('root')
 )
